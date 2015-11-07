@@ -320,8 +320,8 @@ else
 	
 	function displayimage()
             {$usern=$_SESSION['SESS_USERNAME'];
-                $con=mysql_connect("localhost","873630","abdulkalam");
-                mysql_select_db("873630",$con);
+                $con=mysql_connect("localhost","*******","******");
+                mysql_select_db("*******",$con);
                 $qry="select picture from member WHERE username='$usern' ";
                 $result=mysql_query($qry,$con);
                 $row = mysql_fetch_array($result);
@@ -435,8 +435,8 @@ else
             function saveimage($name,$image)
             {$usern=$_SESSION['SESS_USERNAME'];
 			
-                $con=mysql_connect("localhost","873630","abdulkalam");
-                mysql_select_db("873630",$con);
+                $con=mysql_connect("localhost","******","******");
+                mysql_select_db("*******",$con);
                 $qry="UPDATE member SET picname='$name',picture='$image' WHERE username='$usern'";
                 $result=mysql_query($qry,$con);
                 if($result)
@@ -463,8 +463,8 @@ else
             function savenewtopic($newtopic)
             {$usern=$_SESSION['SESS_USERNAME'];
 			
-                $con=mysql_connect("localhost","873630","abdulkalam");
-                mysql_select_db("873630",$con);
+                $con=mysql_connect("*******","*****","******");
+                mysql_select_db("********",$con);
                 $qry="INSERT INTO topic (category,user) VALUES ('$newtopic','$usern')";
                 $result=mysql_query($qry,$con);
                 if($result)
